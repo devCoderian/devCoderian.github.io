@@ -108,36 +108,98 @@ body {
 /* MAIN_CONTENT */
 .main{
   display: flex;
-  background: url(/img/3.jpg) no-repeat center;
+  background: url(/img/103.jpg) no-repeat center;
   background-size: cover;
   height: 100vh;
   min-height: 500px;
   font-family: 'Open Sans', sans-serif;
 }
 
-/* .main .max-width{
+.main .max-width{
   margin: auto 0 auto 100px;
-} */
+}
 
 .main .main-content{
   font-size: 50px;
   color: #fff;
 }
-/* .main .main-content .text01{
-    font-size: 27px;
-} */
 .main .main-content .text02 span{
   color: #1D5BFB;
 }
+/* .main .main-content .text01{
+    font-size: 27px;
+} */
 /* .main .main-content .text03{
   font-size: 27px;
 } */
 
-@media(max-width: 947px){
- 
+/* BTN */
+button {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em 0.2em;
+  padding: 1.5em 3em;
+  border-radius: 10px;
+  /* box-shadow: 0px 2px 3px #1D5BFB; */
+  box-shadow: inset 0 0 0 1px #fff;
+  color: #fff;
+  font-size: inherit;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+
+  position: absolute;
+  vertical-align: middle;
+  /* transition: color 0.2s ease; */
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.contactBtn:hover {
+  background-color: #1D5BFB;
+  box-shadow: 0px 1px 1px #1D5BFB;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+/* .contactBtn:hover, 
+.contactBtn:focus {
+  animation: contactBtn 1s;
+  box-shadow: 0 0 0 2em rgba(#1D5BFB,0);
+}
+
+@keyframes contactBtn {
+  0% { box-shadow: 0 0 0 0 #1D5BFB; }
+} */
+
+/* .contactBtn:hover,
+.contactBtn:focus {
+
+  box-shadow: inset 0 0.5em 0.5em -0.4em #1D5BFB;
+  transform: translateY(-0.25em);
+} */
+/* .contactBtn:hover{
+  background-color: #1D5BFB;
+  color: #DCDDDE;
+} */
+
+/* media query */
+@media(max-width: 1104px){
+  .main .max-width{
+    margin-left: 0px;
+  }
+}
+
+@media(max-width: 991px){
   .max-width{
     padding: 0 50px;
   }
+}
+
+@media(max-width: 947px){
+ 
   .menu-btn{
     display: block;
     z-index: 9999;
@@ -178,5 +240,45 @@ body {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
+  }
+  .contactBtn{
+    margin: 1em 0.2em;
+    padding: 1.2em 2.5em;
+  }
+}
+
+
+@media(max-width: 690px){
+ 
+  .max-width{
+    padding: 0 23px;
+  }
+  .main .main-content{
+    font-size: 40px;
+    color: #fff;
+  }
+  .main .main-content .text02 span{
+    color: #1D5BFB;
+    font-size: 50px;
+  }
+  .contactBtn{
+    margin: 1em 0.2em;
+    padding: 1em 2em;
+  }
+}
+
+
+@media(max-width: 500px){
+  .contactBtn{
+    margin: 1em 0.2em;
+    padding: 1em 2em;
+  }
+  .main .main-content{
+    font-size: 35px;
+    color: #fff;
+  }
+  .main .main-content .text02 span{
+    color: #1D5BFB;
+    font-size: 45px;
   }
 }
