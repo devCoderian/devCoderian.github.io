@@ -185,11 +185,86 @@ button {
   background-color: #1D5BFB;
   color: #DCDDDE;
 } */
+/* about */
+section{
+  padding: 100px 0;
+}
+.about{
+  font-family: Roboto, sans-serif;
+}
+
+.about .title{
+  position: relative;
+  text-align: center;
+  font-family: Open Sans, sans-serif;
+  font-size: 35px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+.about .title::before{
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 180px;
+  height: 3px;
+  background-color: #111;
+  transform: translateX(-50%);
+}
+.about .title::after{
+  content:"who i am";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  padding: 0 10px;
+  transform: translateX(-50%);
+}
+
+
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+
+.about .about-content .left{
+  width: 45%;
+ 
+}
+
+.about .about-content .right{
+  width: 55%;
+}
+
+.about .about-content .left img{
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.about .about-content .right .text{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 
 /* media query */
-@media(max-width: 1104px){
+@media(max-width: 1300px){
   .main .max-width{
     margin-left: 0px;
+  }
+}
+
+@media(max-width:1104px){
+  .about .about-content .left img{
+    height: 350px;
+    width: 350px;
   }
 }
 
@@ -246,6 +321,22 @@ button {
     margin: 1em 0.2em;
     padding: 1.2em 2.5em;
   }
+
+  .max-width{
+    max-width: 800px;
+  }
+
+  .about .about-content .column{
+    width: 50%
+  }
+  .about .about-content .left{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right{
+    flex:100%;
+  }
 }
 
 
@@ -284,4 +375,3 @@ button {
   }
 }
 
-/* 나는 이런 코드를 추가했습니다. */
