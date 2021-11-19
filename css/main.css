@@ -1,11 +1,6 @@
+@charset "utf-8"; 
+@import 'reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@300;400;500;700;900&display=swap');
-/* RESET */
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
 
 /*COMMON*/
 body {
@@ -164,32 +159,10 @@ button {
   color: #fff;
   transform: translateY(-5px);
 }
-
-/* .contactBtn:hover, 
-.contactBtn:focus {
-  animation: contactBtn 1s;
-  box-shadow: 0 0 0 2em rgba(#1D5BFB,0);
-}
-
-@keyframes contactBtn {
-  0% { box-shadow: 0 0 0 0 #1D5BFB; }
-} */
-
-/* .contactBtn:hover,
-.contactBtn:focus {
-
-  box-shadow: inset 0 0.5em 0.5em -0.4em #1D5BFB;
-  transform: translateY(-0.25em);
-} */
-/* .contactBtn:hover{
-  background-color: #1D5BFB;
-  color: #DCDDDE;
-} */
 /* about */
-section{
-  padding: 100px 0;
-}
+
 .about{
+  padding: 100px 0;
   font-family: Roboto, sans-serif;
 }
 
@@ -222,37 +195,332 @@ section{
   transform: translateX(-50%);
 }
 
-
-
 .about .about-content {
+  text-align: center;
+  background-color:#eee;
+  border-radius: 15px;
+  padding: 50px;
+}
+.about .about-content ul li{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+.about .about-content ul li p span{
+  font-weight: bold;
+ 
+}
+
+/* skill */
+section.skill{
+    width: 95%;
+    /* center에 오기 */
+    margin: 95px auto;
+    padding: 70px 0;
+    height: 100%;
+    /* 패딩값이 width 95% 안으로 들어간다. */
+    box-sizing: border-box;
+    position: relative;
+    font-family: Open Sans, sans-serif;
+  
+
+}
+
+.skill .title h2{
+  text-align: center;
+  font-family: Open Sans, sans-serif;
+  font-size: 32px;
+  margin: 20px;
+  padding-bottom: 20px;
+}
+
+
+/*animation*/
+@keyframes opacity-ani {
+  0%{opacity: 0;}
+  70%{opacity: 0;}
+}
+
+@keyframes slid-up2 {
+  0%{opacity: 0;}
+ 70%{opacity: 0; transform: translateY(40px);}
+}
+
+section.skill ul li:nth-child(1) {animation-name:slid-up2; animation-duration: 2.4s;}
+section.skill ul li:nth-child(2) {animation-name:slid-up2; animation-duration: 2.4s;}
+section.skill ul li:nth-child(3) {animation-name:slid-up2; animation-duration: 2.4s;}
+section.skill ul li:nth-child(4) {animation-name:slid-up2; animation-duration: 3.0s;}
+section.skill ul li:nth-child(5) {animation-name:slid-up2; animation-duration: 3.0s;}
+section.skill ul li:nth-child(6) {animation-name:slid-up2; animation-duration: 3.0s;}
+section.skill .title+h2{
+  color:#333;
+  font-family: Open Sans, sans-serif;
+  font-size: 35px;
+}
+
+section.skill ul{
+  /* position: absolute; */
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  width: 90%;
+  /* background-color: rgb(198, 223, 255); */
+  background-color:#eee;
+  border-radius: 15px;
+  min-width: 150px;
+  /* min-height: 550px; */
+  min-height: 150px;
+  border:1px #333;
+  justify-content: space-evenly;
+  align-content: space-around;
+  margin: 0 auto;
+}
+
+
+section.skill ul li{
+  color: #333;
+  /* margin: 74px auto; */
+  margin: 60px auto 30px;
+  min-width: 400px;
+  /* max-width: 600px; */
+}
+section.skill ul li h3{
+  margin: 20px;
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+
+}
+section.skill ul li p {
+  font-weight: 300;
+  font-size: 18px;
+  text-align: center;
+}
+section.skill ul li p img{
+width: 160px;
+height: 160px;
+object-fit: contain;
+}
+
+/* portfolio */
+section.portfolio{
+  width: 95%;
+  margin: 60px auto 0;
+  padding: 40px 0;
+  text-align: center;
+  /* 이미지를 가상 컨텐츠로 주기 위해 */
+  position: relative;
+}
+
+/* section.portfolio:before {
+  content: '';
+  width: 100%;
+  height: 45%;
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+} */
+section.portfolio .title h2{
+  margin-top: 70px;
+  margin-bottom: 80px;
+  font-family: Open Sans, sans-serif;
+  font-size: 35px;
+}
+
+/* section.portfolio .title h2::after{
+  content: "";
+  position: absolute;
+  top:16%;
+  left: 50%;
+  width: 165px;
+  height: 3px;
+  background-color: #111;
+  border-radius: 50px;
+  transform: translateX(-50%)
+} */
+section.portfolio .title p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 100px;
+}
+section.portfolio ul{
+  /* 자식 요소를 float를 줄거기 때문에(띄움) 감쌀수 있도록 hidden 주기 */
+  /* overflow: hidden;
+  padding-top: 50px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  /* background-color: rgb(198, 223, 255); */
+  /* min-width: 400px; */
+  /* min-height: 550px; */
+  min-height: 150px;
+  border:1px #333;
+  justify-content: space-around;
+  align-content: space-around;
+  margin: 0 auto;
+
+
+}
+/* min-width: 150px;
  
+  min-height: 150px;
+  border:1px #333;
+  justify-content: space-evenly;
+  align-content: space-around;
+  margin: 0 auto; */
+section.portfolio ul li{
+  min-width: 40%;
+  margin-top: 20px;
+  /* float: left; */
+  /* width: 25%;
+  padding: 15px; */
+  /* 25% 4개라서 100%를 차지하는데 그안에 패딩값이 있으면 잘리니까
+  borderbox 처리 */
+  /* box-sizing: border-box; */
 }
 
 
-.about .about-content .left{
-  width: 45%;
- 
+
+/* 박스 리스트들 위치 높이 다르게 만들기 */
+/* section.portfolio ul li:nth-child(1), 
+section.portfolio ul li:nth-child(3){
+margin-top: -20px;
 }
 
-.about .about-content .right{
-  width: 55%;
+section.portfolio ul li:nth-child(2), 
+section.portfolio ul li:nth-child(4){
+margin-top: 70px;
+} */
+section.portfolio ul li a{
+display: block;
 }
 
-.about .about-content .left img{
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
+section.portfolio ul li a .img{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.25);
+  /* view text hover 되는거 보게 하기 위해서 */
+  position: relative;
+  /* hover처리될때 부드럽게 진행될수있도록 트랜지션*/
+  transform: all 0.2s;
+  height: 200px;
 }
 
-.about .about-content .right .text{
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 10px;
+.img-wrapper { position: relative; width: 20%; height: 20%; } 
+.img-wrapper img {  transform: translate(50, 50); width: 100%; height: 100%; object-fit: cover; margin: auto; }
+
+
+/* section.portfolio ul li a .img img{
+  width: 100%;
+  height: auto;
+} */
+
+section.portfolio ul li a .img img{
+  top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; margin: auto;
 }
+
+
+section.portfolio ul li a:hover .img,
+section.portfolio ul li a:focus .img{
+  transform: translate(-8px, -8px);
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.35);
+}
+
+section.portfolio ul li a .img:after{
+ content: 'VIEW';
+ width: 100%;
+ height: 100%;
+ background: rgba(44, 35, 28, 0.8);
+ position: absolute;
+ left: 0;
+ top: 0;
+ font-size: 22px;
+ color: #d4d4d4;
+ /* view 글자 위치 조정 */
+ padding-top: 75px;
+ box-sizing: border-box;
+ /* 호버할때만 보이기 위해  */
+ opacity: 0;
+  transition: all 0.2s;
+}
+
+section.portfolio ul li a:hover .img::after,
+section.portfolio ul li a:focus .img::after{
+  opacity: 1;
+}
+
+section.portfolio ul li a h3{
+  font-size: 22px;
+  margin: 40px 0 15px;
+}
+section.portfolio ul li a h3 span{
+  display: block;
+  font-size: 18px;
+  font-weight: normal;
+  color: #888;
+}
+
+
+section.portfolio ul li a p{
+  font-size: 17px;
+  margin-bottom: 50px;
+}
+
+/* animation */
+section.portfolio ul li{
+  animation-name: slide-up;
+  animation-duration: 1s;
+}
+section.portfolio ul li:nth-child(2){
+  animation-name: slide-up;
+  animation-duration: 1.4s;
+}
+section.portfolio ul li:nth-child(2){
+  animation-name: slide-up;
+  animation-duration: 1.7s;
+}
+section.portfolio ul li:nth-child(2){
+  animation-name: slide-up;
+  animation-duration: 2s;
+}
+
+/* footer */
+footer{
+  padding: 80px 0 0;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 리스트를 인라인 블럭요소로 만든다. */
+footer .sns li{ 
+  display: inline-block;
+  margin-right: 30px;
+}
+
+footer .footerLogo{ 
+  font-size: 40px;
+  font-weight: 500;
+  /* letter-spacing: -6px; */
+  color: #39312b;
+  margin: 40px 0 20px;
+}
+footer ul li{
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+/* copyright요소를 span으로 묶어서 마진이 먹지 않으므로
+block요소로 바꾼다. */
+footer ul li .copyright{
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 20px;
+  display: block;
+}
+
+
 
 /* media query */
 @media(max-width: 1300px){

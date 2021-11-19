@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,9 +28,9 @@
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#skill">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-btn" onclick="menuClick();">
                 <span class="material-icons">
@@ -47,7 +47,7 @@
                 <div class="text03">Frontend Developer</div>
             </div>
           
-                <button class="contactBtn">Contact</button>
+            <a href="https://github.com/devCoderian"><button class="contactBtn" >github</button></a>
 
         </div>
   
@@ -58,15 +58,131 @@
         <div class="max-width">
             <h2 class="title">About me</h2>
             <div class="about-content">
-                <div class="column left">
-                    <img src="img/profile.png" alt="">
-                </div>
-                <div class="column right">
-                   <div class="text">안녕하세요</div>
-                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
+                   <p>안녕하세요, 성장하는 프론트엔드 개발자 정이안입니다.<br>
+                    꼼꼼한 성격, 그리고 책임감을 가지고 일하는 것이 저의 장점입니다.</p>
+                    
+                    <p> 최근에는 웹 개발자로서 역량을 키우기 위해 타입스크립트와 next.js를 공부하고 있습니다. 
+
+                    <ul>
+                        <li>
+                            <p><span>이름</span> 정이안</p>
+                        </li>
+                        <li>
+                          
+                            <p><span>생년월일</span> 1996.07.19</p>
+                        </li>
+                        <li>
+                           
+                            <p><span>거주지</span> 서울특별시 관악구</p>
+                        </li>
+                        <li>
+                            <p><span>이메일</span> ian0719@naver.com</p>
+                        </li>
+
+                    </ul>
             </div>
         </div>
     </section>
+    <section class="skill" id ="skill">
+                    <div class="title">
+                    <h2>SKILLS</h2>
+                    </div>
+                    <ul class="skillList">
+                        <li>
+                            <p><img src="./img/css.png" alt="css"></p>
+                            <h3>HTML/CSS</h3>
+                        </li>
+                        <li>
+                            <p><img src="./img/js.png" alt="javascript"></p>
+                            <h3>javascript</h3>
+                         
+                        </li>
+                        <li>
+                            <p><img src="./img/react.svg.png" alt="react"></p>
+                            <h3>React</h3>
+                        </li>
+                        <li>
+                            <p><img src="./img/redux.png" alt="redux"></p>
+                            <h3>Redux</h3>
+                            
+                        </li>
+                        <li>
+                            <p><img src="./img/spring.png" alt="spring"></p>
+                            <h3>Spring Framework</h3>
+                           
+                        </li>
+                        <li>
+                            <p><img src="./img/oracle.png" alt="oracle"></p>
+                            <h3>Oracle</h3>
+                        </li>
+                    </ul>
+        <!-- </div> -->
+    </section>
+    <!-- section skill -->
+  <!-- secticion .portfolio -->
+  <section class="portfolio" id="portfolio">
+    <div class="title">
+        <h2>PORTFOLIO</h2>
+    </div>
+    <ul>
+        <li>
+            <a href = "https://devcoderian.github.io/cafe/" target="_blank">
+                <p class="img">
+                    <img src="/img/ediya.png" alt="">
+                </p>
+                <h3>cafe<span>cafe publishing</span></h3>
+                <p>HTML, CSS, javascript로 구현한  <br>
+                    이디야 카페 퍼블리싱 사이트입니다. <br>
+                    #HTML #CSS #javascript
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href = "http://react-fake-shop.s3-website.us-east-2.amazonaws.com/" target="_blank">
+                <p class="img">
+                    <img src="/img/shop.png" alt="">
+                </p>
+                <h3>shopping-cart<span>e-commerce Services</span></h3>
+                <p>FAKE API로 통신하는 React로 이루어진 <br>
+                    쇼핑몰 토이 프로젝트. <br>
+                    #React #redux #antd
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="./download/LMS 사용자메뉴얼.pdf" download>
+                <p class="img">
+                    <img src="img/lms.png" alt="">
+                </p>
+                <h3>학습 관리 프로그램<span>LMS Services</span></h3>
+                <p>관리자/ 강사/ 학생 사용자 유형에 맞게 <br>
+                    다양한 기능을 사용할 수 있는 학습 관리 시스템 <br>
+                    #mySql #Spring Framework #Vue.js
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href = "#">
+                <p class="img">
+                    <img src="img/admin.jpg" alt="">
+                </p>
+                <h3>SNS<span>SNS Services</span></h3>
+                <p>SNS 클론 토이 프로젝트<br>
+                    #React #redux #antd
+                </p>
+            </a>
+        </li>
+    </ul>
+</section>
+<!-- footer -->
+<footer id ="contact">
+ 
+    <h2 class="footerLogo">JungIan portfolio</h2>
+    <ul>
+        <li><a href ="https://github.com/devCoderian">github | https://github.com/devCoderian</a></li>
+        <li>email | ian0719@naver.com</li>
+        <li><span class="copyright">COPYLIGHT 2021</span></li>
+    </ul>
+</footer>
 </body>
 </html>

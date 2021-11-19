@@ -17,3 +17,9 @@ const menuClick = () =>{
   document.querySelector('.menu-btn span').classList.toggle('active');
 //   hamburger.classList.toggle( 'active', false );
 }
+
+// const gitClick = () =>{
+//     let btn = document.querySelector('.contactBtn');
+//     document.addEventListener('scroll'
+//   }
+
